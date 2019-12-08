@@ -69,6 +69,10 @@ file = File.new("input.txt")
 program = file.gets_to_end.split(',').map(&.to_i)
 file.close
 
+interpereter = Interpreter.new(program, [1])
+interpereter.compute
+puts interpereter.outputs
+
 interpereter = Interpreter.new(program, [5])
 interpereter.compute
 puts interpereter.outputs
